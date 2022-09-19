@@ -1,0 +1,35 @@
+const mongoose = require('mongoose');
+const {Schema} = require('mongoose');
+
+
+const  messageSchema = new Schema({
+    name: {
+        type: 'string',
+        required: true,
+    },
+
+    email: {
+        type: 'string',
+        required: true,
+    },
+
+    phone: {
+        type: 'string',
+        required: true,
+
+    },
+    subject:{
+        type:'string',
+        required:true
+    },
+
+    message: {
+        type: 'string',
+        required: true,
+    }
+});
+
+
+
+exports.Message = mongoose.model('Message', messageSchema);
+exports.messageSchema = messageSchema;

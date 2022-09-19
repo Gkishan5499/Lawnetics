@@ -1,0 +1,41 @@
+
+<mat-toolbar color="primary">
+  <h2>Admin Dashoard</h2>
+  <div class="spacer">
+    
+  <a routerLink="/admin"  mat-raised-button color="warn">Logout</a>
+  <a routerLink= "/"  mat-raised-button color="primary">Home</a>
+  </div>
+</mat-toolbar>
+<div class="container">
+  
+    <mat-card>
+        <table class="table">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Subject</th>
+      <th>Message</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of listdata">
+      <td>{{data._id}}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.email}}</td>
+      <td>{{data.phone}}</td>
+    <td>{{data.subject}}</td>
+    <td>{{data.message}}</td>
+    <td><button (click)="ondelete(data._id)"><mat-icon style="color:red;">delete</mat-icon></button></td>
+    </tr>
+   
+  </tbody>
+</table>
+
+
+    </mat-card>
+</div>

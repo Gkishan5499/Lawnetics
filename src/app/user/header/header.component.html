@@ -1,0 +1,80 @@
+<mat-sidenav-container >
+
+  <mat-sidenav #sidenav class="sidenav-container">
+    <div fxLayout="column">
+    <button mat-button class="menu-button" [routerLink]="['/user/home']" (click)="sidenav.close()">
+      <span>Home</span>
+    </button>
+    <button mat-button class="menu-button" [routerLink]="['/user/about-us']" (click)="sidenav.close()">
+      <span>About Us</span>
+    </button>
+    <button mat-button class="menu-button" [matMenuTriggerFor]="belowMenu">Services</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <a [routerLink]="['/user/trademark']" (click)="sidenav.close()"><button mat-menu-item>Trademarks</button></a>
+      <a [routerLink]="['/user/copyright']" (click)="sidenav.close()"><button mat-menu-item>Copyrights</button></a>
+      <a [routerLink]="['/user/design']" (click)="sidenav.close()"><button mat-menu-item>Design</button></a>
+      <a [routerLink]="['/user/patent']" (click)="sidenav.close()"><button mat-menu-item>Patent</button></a>
+      <a [routerLink]="['/user/geographical-indication']" (click)="sidenav.close()"><button mat-menu-item>Geographical Indication</button></a>
+      <a [routerLink]="['/user/ip-litigation']" (click)="sidenav.close()"><button mat-menu-item>IP Litigation</button></a>
+      <a [routerLink]="['/user/ip-commercialization']" (click)="sidenav.close()"><button mat-menu-item>IP Commercialization</button></a>
+      <a [routerLink]="['/user/cyber-law']" (click)="sidenav.close()"><button mat-menu-item>Cyber Law</button></a>
+    </mat-menu>
+
+    <!-- <button mat-button class="menu-button">
+      <span>Our Clients</span>
+    </button> -->
+    <button mat-button class="menu-button">
+      <span>Career</span>
+    </button>
+  </div>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill>
+
+
+
+<div class="fixed w-full  bg-gray-900 " id="myid2">
+    <div class="px-6 mx-auto max-w-screen-2xl md:px-8">
+      <header class="flex items-center justify-between ">
+        <!-- logo - start -->
+        <a href="/" class="inline-flex items-center" aria-label="logo">
+        <img src="../../assets/image/logo//lawneticslogo.png" alt="logo" height="120px" width="120px">
+        </a>
+        <!-- logo - end -->
+  
+        <!-- nav - start -->
+        <nav class="hidden gap-12 lg:flex">
+          <a [routerLink]="['/user/home']" class="text-lg font-semibold text-white">Home</a>
+          <a [routerLink]="['/user/about-us']" class="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700">About Us</a>
+          <button mat-button class="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700" [matMenuTriggerFor]="belowMenu">Services</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <a [routerLink]="['/user/trademark']"><button mat-menu-item>Trademarks</button></a>
+      <a [routerLink]="['/user/copyright']"><button mat-menu-item>Copyrights</button></a>
+      <a [routerLink]="['/user/design']"><button mat-menu-item>Design</button></a>
+      <a [routerLink]="['/user/patent']"><button mat-menu-item>Patent</button></a>
+      <a [routerLink]="['/user/geographical-indication']"><button mat-menu-item>Geographical Indication</button></a>
+      <a [routerLink]="['/user/ip-litigation']"><button mat-menu-item>IP Litigation</button></a>
+      <a [routerLink]="['/user/ip-commercialization']"><button mat-menu-item>IP Commercialization</button></a>
+      <a [routerLink]="['/user/cyber-law']"><button mat-menu-item>Cyber Law</button></a>
+      </mat-menu>
+          <a [routerLink]="['/user/home']" class="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700">Our Clients</a>
+          <a [routerLink]="['/user/home']" class="text-lg font-semibold text-white transition duration-100 hover:text-indigo-500 active:text-indigo-700">Careers</a>
+        </nav>
+        <!-- nav - end -->
+  
+        <!-- buttons - start -->
+        <a [routerLink]="['/user/contact']" class="hidden px-8 py-3 text-sm font-semibold text-center transition duration-100 bg-gray-200 rounded-lg outline-none lg:inline-block hover:bg-blue-700 focus-visible:ring ring-indigo-300 text-black-700 active:text-gray-700 md:text-base">Contact Us</a>
+  
+        <button type="button" (click)="sidenav.toggle()" class="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+          </svg>
+  
+          Menu
+        </button>
+        <!-- buttons - end -->
+      </header>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</mat-sidenav-content>
+</mat-sidenav-container>

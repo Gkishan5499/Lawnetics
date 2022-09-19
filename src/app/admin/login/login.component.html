@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="col-1"><img src="../../../assets/image/adminlogin.jpg"></div>
+    <div class="col-2">
+        <mat-card>
+        <mat-card-title>Admin Login</mat-card-title>
+        <p style="color:red;">{{message}}</p>
+       <form>
+        <mat-form-field appearance="outline">
+            <mat-label>Useraname</mat-label>
+            <input matInput placeholder="Enter Username" required 
+            name="username" [(ngModel)]="username">
+    
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Enter Password"  required 
+            name="password" [(ngModel)]="password">
+    
+        </mat-form-field>
+    
+        <button mat-raised-button color="warn" type="submit" (click)="adminLogin()">Login</button>
+  </form>
+       </mat-card></div>
+
+</div>
